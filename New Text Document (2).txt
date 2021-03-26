@@ -1,0 +1,158 @@
+MSZoning
+LotFrontage
+LotArea
+Utilities
+Condition1
+BldgType
+HouseStyle
+YearBuilt
+YearRemodAdd
+MasVnrArea
+TotalBsmtSF
+1stFlrSF
+2ndFlrSF
+GrLivArea
+TotRmsAbvGrd#check
+GarageArea
+
+x=dataset.loc[:,'MSZoning','LotArea','Utilities','Condition1','Type of dwelling','MasVnrArea','TotalBsmtSF','1stFlrSF','2ndFlrSF','GrLivArea','TotRmsAbvGrd','GarageArea']
+
+removing columns for multicollinearity
+MSZoning_C (all) 
+Condition1_Artery
+BldgType_1Fam 
+HouseStyle_1.5Fin 
+
+2(min)-TotalBsmtSF#check,3-1stFlrSF#remove ,4-2ndFlrSF #remove,5-GrLivArea#remove,6(min)-TotRmsAbvGrd#check  ,8-MSZoning_FV#check  ,10-MSZoning_RL#remove,11-MSZoning_RM#remove  ,13-Condition1_Norm #remove ,25-HouseStyle_1Story#remove ,28-HouseStyle_2Story #remove
+
+
+LotFrontage ,LotArea,TotalBsmtSF,1stFlrSF,2ndFlrSF,GrLivArea,TotRmsAbvGrd,GarageArea
+
+
+
+
+Data columns (total 24 columns):
+LotFrontage          1460 non-null float64
+LotArea              1460 non-null int64
+TotalBsmtSF          1460 non-null int64
+TotRmsAbvGrd         1460 non-null int64
+GarageArea           1460 non-null int64
+MSZoning_FV          1460 non-null uint8
+MSZoning_RH          1460 non-null uint8
+Condition1_Feedr     1460 non-null uint8
+Condition1_PosA      1460 non-null uint8
+Condition1_PosN      1460 non-null uint8
+Condition1_RRAe      1460 non-null uint8
+Condition1_RRAn      1460 non-null uint8
+Condition1_RRNe      1460 non-null uint8
+Condition1_RRNn      1460 non-null uint8
+BldgType_2fmCon      1460 non-null uint8
+BldgType_Duplex      1460 non-null uint8
+BldgType_Twnhs       1460 non-null uint8
+BldgType_TwnhsE      1460 non-null uint8
+HouseStyle_1.5Unf    1460 non-null uint8
+HouseStyle_2.5Fin    1460 non-null uint8
+HouseStyle_2.5Unf    1460 non-null uint8
+HouseStyle_SFoyer    1460 non-null uint8
+HouseStyle_SLvl      1460 non-null uint8
+intercept            1460 non-null int64
+dtypes: float64(1), int64(5), uint8(18)
+memory usage: 94.2 KB
+
+x_test3.info()
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1459 entries, 0 to 1458
+Data columns (total 23 columns):
+LotFrontage          1459 non-null float64
+LotArea              1459 non-null int64
+TotalBsmtSF          1459 non-null float64
+TotRmsAbvGrd         1459 non-null int64
+GarageArea           1459 non-null float64
+MSZoning_FV          1459 non-null uint8
+MSZoning_RH          1459 non-null uint8
+Condition1_Feedr     1459 non-null uint8
+Condition1_PosA      1459 non-null uint8
+Condition1_PosN      1459 non-null uint8
+Condition1_RRAe      1459 non-null uint8
+Condition1_RRAn      1459 non-null uint8
+Condition1_RRNe      1459 non-null uint8
+Condition1_RRNn      1459 non-null uint8
+BldgType_2fmCon      1459 non-null uint8
+BldgType_Duplex      1459 non-null uint8
+BldgType_Twnhs       1459 non-null uint8
+BldgType_TwnhsE      1459 non-null uint8
+HouseStyle_1.5Unf    1459 non-null uint8
+HouseStyle_2.5Unf    1459 non-null uint8
+HouseStyle_SFoyer    1459 non-null uint8
+HouseStyle_SLvl      1459 non-null uint8
+intercept            1459 non-null int64
+dtypes: float64(3), int64(3), uint8(17)
+memory usage: 92.7 KB
+
+
+
+HouseStyle_2.5Fin
+
+
+
+largest-MSZoning_FV
+2nd largest-GrLivArea
+3d largest-2ndFlrSF
+4th-1stFlrSF
+5th-Condition1_Norm 
+6th-MSZoning_RL 
+7th-HouseStyle_1Story
+
+
+MasVnrType,BsmtQual,BsmtCond,BsmtExposure,BsmtFinType1,BsmtFinType2,GarageType,GarageFinish,GarageQual,GarageCond,Electrical
+
+Functional,KitchenQual,BsmtQual,Exterior1st,Exterior2nd,Utilities,MSZoning
+
+
+MasVnrArea,GarageYrBlt
+
+MasVnrArea,BsmtFinSF1,BsmtFinSF2 ,BsmtUnfSF,TotalBsmtSF ,BsmtFullBath,BsmtHalfBath,GarageYrBlt ,GarageCars,GarageArea
+
+
+
+
+'Condition2_RRAe',
+ 'Condition2_RRAn',
+ 'Condition2_RRNn',
+ 'Electrical_Mix',
+ 'Exterior1st_ImStucc',
+ 'Exterior1st_Stone',
+ 'Exterior2nd_Other',
+ 'GarageQual_Ex',
+ 'Heating_Floor',
+ 'Heating_OthW',
+ 'HouseStyle_2.5Fin',
+ 'RoofMatl_ClyTile',
+ 'RoofMatl_Membran',
+ 'RoofMatl_Metal',
+ 'RoofMatl_Roll',
+ 'Utilities_NoSeWa
+
+
+
+
+
+
+
+
+
+'BsmtFinSF1','1stFlrSF','MSZoning_C (all)','Street_Grvl','LotShape_IR1','LandContour_Bnk','LotConfig_Corner','LandSlope_Gtl','Neighborhood_Blmngtn','Condition1_Artery','BldgType_1Fam','RoofStyle_Flat',
+'Exterior1st_CBlock','MasVnrType_BrkCmn','ExterQual_Ex','ExterCond_Ex','Foundation_BrkTil','BsmtQual_Ex','BsmtCond_Fa','BsmtExposure_Av','BsmtFinType1_ALQ','BsmtFinType2_ALQ','HeatingQC_Ex',
+'CentralAir_N','KitchenQual_Ex','Functional_Maj1','GarageType_2Types','GarageFinish_Fin','GarageCond_Ex' ,'PavedDrive_N','YearBuilt','YearRemodAdd','GarageYrBlt','Electrical_SBrkr','GarageCond_TA', 
+'Utilities_AllPub','RoofMatl_CompShg','ExterCond_TA','Heating_GasA','GarageQual_TA','Condition2_Norm','RoofStyle_Gable','Street_Pave','Exterior2nd_VinylSd','Exterior1st_VinylSd', 
+'MSZoning_RL','GrLivArea','HouseStyle_1Story','GarageType_Attchd','Functional_Typ','BsmtFinType2_Unf','OverallQual','KitchenAbvGr','TotRmsAbvGrd','MSSubClass','MasVnrType_None','Exterior2nd_MetalSd',
+'GarageCars','OverallCond','ExterQual_TA','TotalBsmtSF','BsmtCond_TA','Condition1_Norm','BedroomAbvGr','CentralAir_Y','LandContour_Lvl','Exterior1st_CemntBd','FullBath','PavedDrive_Y' ,'BsmtQual_TA',
+'Exterior1st_HdBoard','KitchenQual_TA','2ndFlrSF','GarageArea','Foundation_PConc','Neighborhood_NAmes','Exterior2nd_Wd Sdng','BsmtExposure_No','BsmtUnfSF','Neighborhood_Somerst','GarageFinish_Unf',
+'LotConfig_Inside','LotArea','Exterior1st_AsbShng','MSZoning_RM','Foundation_CBlock','BsmtFinType1_Unf','BsmtQual_Gd','HouseStyle_2Story','ExterQual_Gd','Exterior1st_Plywood','Exterior2nd_Stucco','Exterior2nd_Brk Cmn',
+'MasVnrType_BrkFace','LotShape_Reg','Fireplaces'
+
+
+
+atmhotlist@indianbank.co.in
+
+
